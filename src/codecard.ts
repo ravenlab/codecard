@@ -25,27 +25,30 @@ class CodeCard {
 	
 	private title: string;
 	private description: string;
-	private repoIcon: string;
 	private icon: string;
 	private url: string;
+	private repoIcon: string;
+	private platform: string;
 	constructor(title: string, description: string, icon:string, url: string)
 	{
 		this.title = title;
 		this.description = description;
 		this.icon = icon;
 		this.url = url.toLowerCase();
-		this.repoIcon = this.parseIcon(url);
+		this.parsePlatform(url);
 	}
 	
-	private parseIcon(url: string): string
+	private parsePlatform(url: string): void
 	{
 		if(url.startsWith("https://github.com"))
 		{
-			return "fab fa-github";
+			this.platform = "Github";
+			this.repoIcon = "fab fa-github";
 		}
 		else if(url.startsWith("https://gitlab.com"))
 		{
-			return "fab fa-gitlab";
+			this.platform = "Gitlab";
+			this.repoIcon = "fab fa-gitlab";
 		}
 	}
 	
@@ -55,7 +58,7 @@ class CodeCard {
 		'<div class="card-body">' + 
 		'<h5 class="card-title"><i class="' + this.icon + '"></i> ' + this.title + '</h5>' +
 		'<p class="card-text">' + this.description + '</p>' +
-		'<a href="' + this.url +'" target="_blank" class="btn btn-primary font"><i class="' + this.repoIcon + '"></i> View on Github</a>';
+		'<a href="' + this.url +'" target="_blank" class="btn btn-primary font"><i class="' + this.repoIcon + '"></i> View on ' + this.platform + '</a>';
 		element.innerHTML = element.innerHTML + html;
 	}
 }
