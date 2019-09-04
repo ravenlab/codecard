@@ -24,16 +24,16 @@
 class CodeCard {
 	
 	private title: string;
-	private description: string;
 	private icon: string;
+	private description: string;
 	private url: string;
 	private repoIcon: string;
 	private platform: string;
-	constructor(title: string, description: string, icon:string, url: string)
+	constructor(title: string, icon:string, description: string, url: string)
 	{
 		this.title = title;
-		this.description = description;
 		this.icon = icon;
+		this.description = description;
 		this.url = url.toLowerCase();
 		this.parsePlatform(url);
 	}
