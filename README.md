@@ -10,7 +10,7 @@ website or portfolio.
 You will need
 
 * [Bootstrap](https://getbootstrap.com/)
-* [Fontawesome](https://fontawesome.com/)
+* [Font Awesome](https://fontawesome.com/)
 
 
 Use it as a script or download, we are not on npm yet.
