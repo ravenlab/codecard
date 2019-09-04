@@ -48,4 +48,3 @@ class CodeCard {
         element.innerHTML = element.innerHTML + html;
     }
 }
-//# sourceMappingURL=codecard.js.map

@@ -3,7 +3,6 @@
         "noImplicitAny": true,
         "removeComments": false,
         "preserveConstEnums": true,
-        "sourceMap": true,
-		"target": "es6"
+		"target": "es6",
     },
 }
