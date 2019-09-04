@@ -24,24 +24,26 @@
 class CodeCard {
 	
 	private title: string;
-	private icon: string;
 	private description: string;
+	private repoIcon: string;
+	private icon: string;
 	private url: string;
-	constructor(title: string, description: string, url: string)
+	constructor(title: string, description: string, icon:string, url: string)
 	{
 		this.title = title;
-		this.icon = this.parseIcon(url);
 		this.description = description;
-		this.url = url;
+		this.icon = icon;
+		this.url = url.toLowerCase();
+		this.repoIcon = this.parseIcon(url);
 	}
 	
 	private parseIcon(url: string): string
 	{
-		if(url.startsWith("https://github.com") || url.startsWith("github.com"))
+		if(url.startsWith("https://github.com"))
 		{
 			return "fab fa-github";
 		}
-		else if(url.startsWith("https://gitlab.com") || url.startsWith("gitlab.com"))
+		else if(url.startsWith("https://gitlab.com"))
 		{
 			return "fab fa-gitlab";
 		}
@@ -53,7 +55,7 @@ class CodeCard {
 		'<div class="card-body">' + 
 		'<h5 class="card-title"><i class="' + this.icon + '"></i> ' + this.title + '</h5>' +
 		'<p class="card-text">' + this.description + '</p>' +
-		'<a href="' + this.url +'" target="_blank" class="btn btn-primary font"><i class="' + this.icon + '"></i> View on Github</a>';
+		'<a href="' + this.url +'" target="_blank" class="btn btn-primary font"><i class="' + this.repoIcon + '"></i> View on Github</a>';
 		element.innerHTML = element.innerHTML + html;
 	}
 }
