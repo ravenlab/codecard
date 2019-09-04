@@ -40,12 +40,12 @@ class CodeCard {
 	
 	private parsePlatform(url: string): void
 	{
-		if(url.startsWith("https://github.com"))
+		if(url.startsWith("https://github.com") || url.startsWith("https://www.github.com"))
 		{
 			this.platform = "Github";
 			this.repoIcon = "fab fa-github";
 		}
-		else if(url.startsWith("https://gitlab.com"))
+		else if(url.startsWith("https://gitlab.com") || url.startsWith("https://www.gitlab.com"))
 		{
 			this.platform = "Gitlab";
 			this.repoIcon = "fab fa-gitlab";
