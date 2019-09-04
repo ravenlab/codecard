@@ -1,6 +1,9 @@
-# CodeCard
+# codecard
 
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+Bootstrap cards to display information about your code repositories. This may be useful for your own personal
+website or portfolio.
 
 # Using
 
