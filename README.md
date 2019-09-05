@@ -13,6 +13,4 @@ You will need
 * [Font Awesome](https://fontawesome.com/)
 
 
-Use it as a script or download, we are not on npm yet.
-
-`<script src="https://cdn.jsdelivr.net/gh/ravenlab/codecard@1.0.1/codecard.js"</script>`
+Use it as a [script from jsdelivr](https://www.jsdelivr.com/package/gh/ravenlab/codecard) or download, we are not on npm yet.
